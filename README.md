@@ -22,5 +22,12 @@ Em sequencia vamos importar as funções no qual iremos utilizar nesse projeto.
 Agora, precisamos definir as chaves que nos permitem conectar ao Twitter. 
 _Caso voce não saiba como obter essas chaves, eu explico com mais detalhes no meu blog:_ [eraldomaia.com/blog](url)
 
-Adicione aqui sua Consumer Key
-`consumer_key = "xxxxxxxxx"`
+> `consumer_key = "xxxxxxxxx"`
+
+> `consumer_secret = "xxxxxxxxx"`
+
+> `access_token = "xxxxxxxxx"`
+
+> `access_token = "xxxxxxxxx"`
+
+

@@ -64,3 +64,15 @@ Por ultimo inserimos os dados coletados no MongoDB `tweetind = col.insert_one(ob
 
 _obs: As colunas "created_at", "id_str", "text" foram retidas de acordo com a documentação da API do Twitter. Disponivel em: [https://developer.twitter.com/en/docs](url)_
 
+Agora precisamos instanciar o objeto da classe `MyListener`:
+
+> `mylistener = MyListener()`
+
+Em seguida, criamos o objeto `mystream` que vai fazer a autenticação com a API:
+
+> `mystream = Stream(auth, listener = mylistener)`
+
+Passando a chave de autenticação `Auth` e o listener que será usado, que no caso será o objeto `mylistener`.
+
+
+

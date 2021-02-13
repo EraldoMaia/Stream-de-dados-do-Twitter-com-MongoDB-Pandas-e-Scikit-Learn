@@ -7,7 +7,7 @@ Primeiramente devemos Instalar o pacote tweepy no nosso SO (Sistema Operancional
 
 Esse pacote permite fazer a conexão entre o Python e o Twitter.
 
-_OBS: O MongoDB deve está conectado_
+_obs: O MongoDB deve está conectado_
 
 Em sequencia vamos importar alguns módulos que iremos utilizar nesse projeto.
 
@@ -40,7 +40,7 @@ Após criar o objeto de autenticação, passamos por meio da função `set_acces
 
 > `auth.set_access_token(access_token, access_token_secret)`
 
-Agora criamos uma classe para capturar os stream de dados do Twitter e armazenar no MongoDB.
+Na sequencia criamos uma classe para capturar os stream de dados do Twitter e armazenar no MongoDB.
 
 ```python 
 class MyListener(StreamListener):
@@ -54,5 +54,13 @@ class MyListener(StreamListener):
         print (obj)
         return True
 ```
+Dentro da classe `MyListener`, nos temos um metodo chamado de `on_data`, esse metodo vai coletar os dados e esses dados serão convertidos para o formato JSON
+`tweet = json.loads(dados)`, utlizamos o formato JSON para que em seguida possamos gravar esses dados no MongoDB.
 
+Em seguida, definimos as colunas que serão coletadas ` created_at = tweet["created_at"]`, `id_str = tweet["id_str"]`, `text = tweet["text"]`. 
+
+Por ultimo inserimos os dados coletados no MongoDB `tweetind = col.insert_one(obj).inserted_id`
+
+
+_obs: As colunas "created_at", "id_str", "text" foram retidas de acordo com a documentação da API do Twitter. Disponivel em: [https://developer.twitter.com/en/docs](url)_
 

@@ -6,6 +6,7 @@ Primeiramente devemos Instalar o pacote tweepy no nosso SO (Sistema Operancional
 > `!pip install tweepy`
 
 Esse pacote permite fazer a conexão entre o Python e o Twitter.
+_OBS: O MongoDB deve está conectado_
 
 Em sequencia vamos importar alguns módulos que iremos utilizar nesse projeto.
 
@@ -29,5 +30,7 @@ _Caso voce não saiba como obter essas chaves, eu explico com mais detalhes no m
 > `access_token = "xxxxxxxxx"`
 
 > `access_token = "xxxxxxxxx"`
+
+
 
 

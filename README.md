@@ -36,5 +36,23 @@ Em seguida iremos definir a conexão de atenticação, criando as chaves de aute
 
 > `auth = OAuthHandler(consumer_key, consumer_secret)`
 
+Após criar o objeto de autenticação, passamos por meio da função `set_access_token`, os tokens de acesso a API.
+
+> `auth.set_access_token(access_token, access_token_secret)`
+
+Agora criamos uma classe para capturar os stream de dados do Twitter e armazenar no MongoDB.
+
+```python 
+class MyListener(StreamListener):
+    def on_data(self, dados):
+        tweet = json.loads(dados)
+        created_at = tweet["created_at"]
+        id_str = tweet["id_str"]
+        text = tweet["text"]
+        obj = {"created_at":created_at,"id_str":id_str,"text":text,}
+        tweetind = col.insert_one(obj).inserted_id
+        print (obj)
+        return True
+```
 
 

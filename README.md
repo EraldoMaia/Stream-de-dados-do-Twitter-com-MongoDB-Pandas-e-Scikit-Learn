@@ -1,6 +1,9 @@
 # Stream-de-dados-do-Twitter-com-MongoDB-Pandas-e-Scikit-Learn
 Basicamente o que faremos é um trabalho de Text Mining (técnica de processamento de linguagem natural para extrair informações relevantes de dados de textos).Como o Twitter, possui basicamente textos, faremos uma operação de extract (extração), vamos gravar esses dados em um Data Base (MongoDB) e depois iremos aplicar algumas técnicas de analise.
 
+
+# Preparando a conexão com o Twitter:
+
 Primeiramente devemos Instalar o pacote tweepy no nosso SO (Sistema Operancional).
 
 > `!pip install tweepy`
@@ -74,5 +77,5 @@ Em seguida, criamos o objeto `mystream` que vai fazer a autenticação com a API
 
 Passando a chave de autenticação `Auth` e o listener que será usado, que no caso será o objeto `mylistener`.
 
-
+# Preparando a conexão com o MongoDB:
 

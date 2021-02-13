@@ -7,7 +7,7 @@ Primeiramente devemos Instalar o pacote tweepy no nosso SO (Sistema Operancional
 
 Esse pacote permite fazer a conexão entre o Python e o Twitter.
 
-Em sequencia vamos importar as funções no qual iremos utilizar nesse projeto.
+Em sequencia vamos importar alguns módulos que iremos utilizar nesse projeto.
 
 > `from tweepy.streaming import StreamListener`
 

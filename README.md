@@ -1,0 +1,2 @@
+# Stream-de-dados-do-Twitter-com-MongoDB-Pandas-e-Scikit-Learn
+Basicamente o que faremos é um trabalho de Text Mining (técnica de processamento de linguagem natural para extrair informações relevantes de dados de textos).Como o Twitter, possui basicamente textos, faremos uma operação de extract (extração), vamos gravar esses dados em um Data Base (MongoDB) e depois iremos aplicar algumas técnicas de analise.

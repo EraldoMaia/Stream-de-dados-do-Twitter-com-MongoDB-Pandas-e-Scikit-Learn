@@ -12,8 +12,6 @@ Primeiramente devemos Instalar o pacote tweepy no nosso SO (Sistema Operancional
 
 Esse pacote permite fazer a conexão entre o Python e o Twitter.
 
-_obs: O MongoDB deve está conectado_
-
 Em sequencia vamos importar alguns módulos que iremos utilizar nesse projeto.
 
 > `from tweepy.streaming import StreamListener`
@@ -46,6 +44,7 @@ Após criar o objeto de autenticação, passamos por meio da função `set_acces
 > `auth.set_access_token(access_token, access_token_secret)`
 
 Na sequencia criamos uma classe para capturar os stream de dados do Twitter e armazenar no MongoDB.
+_obs: O MongoDB deve está conectado_
 
 ```python 
 class MyListener(StreamListener):

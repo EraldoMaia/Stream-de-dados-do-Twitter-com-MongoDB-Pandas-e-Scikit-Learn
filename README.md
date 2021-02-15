@@ -121,6 +121,9 @@ Em seguida, verificamos se realmentes os dados foram gravados no MongoDB
 
 > `col.find_one()`
 
+<img width="1074" alt="Captura de Tela 2021-02-15 às 14 09 17" src="https://user-images.githubusercontent.com/55844931/107975883-81998980-6f97-11eb-88d5-4d6fac8b393b.png">
+
+
 # Análise de Dados com Pandas e Scikit-Learn
 
 Iremos agora, converter os tweets coletados, para o formato no Pandas (O Pandas, é uma expecie de excel para o Python, pois permite o trabalho com Data Frames, objeto no formato de linhas e colunas). O Scikit-Learn é um pacote para machine learning, com ele conseguimos criar modelos preditivos.

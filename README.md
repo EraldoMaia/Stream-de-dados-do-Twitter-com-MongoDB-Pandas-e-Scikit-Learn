@@ -107,3 +107,17 @@ Iniciamos então o filtro coletando e gravando os tweets no MongoDB
 
 > `mystream.filter(track=keywords)`
 
+_obs: No momento que voce estiver satisfeito com a quantidade de dados coletados, precione o botao "STOP" no seu Jupter Notebook._
+
+# Consultando os dados no MongoDB
+
+Antes de tudo devemos desconectar o MongoDB, pois não iremos mais coletar tweets
+
+> `mystream.disconnect()`
+
+Em seguida, verificamos se realmentes os dados foram gravados no MongoDB
+
+> `col.find_one()`
+
+# Análise de Dados com Pandas e Scikit-Learn
+

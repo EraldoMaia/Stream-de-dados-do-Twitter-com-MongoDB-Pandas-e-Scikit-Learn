@@ -30,13 +30,13 @@ Em sequencia vamos importar alguns módulos que iremos utilizar nesse projeto.
 Agora, precisamos definir as chaves que nos permitem conectar ao Twitter. 
 _Caso voce não saiba como obter essas chaves, eu explico com mais detalhes no meu blog:_ [eraldomaia.com/blog](url)
 
-> `consumer_key = "xxxxxxxxx"`
+> `consumer_key = "xxxxxxxxx"` (API key)
 
-> `consumer_secret = "xxxxxxxxx"`
-
-> `access_token = "xxxxxxxxx"`
+> `consumer_secret = "xxxxxxxxx"` (API secret key)
 
 > `access_token = "xxxxxxxxx"`
+
+> `access_token_secret = "xxxxxxxxx"`
 
 Em seguida iremos definir a conexão de atenticação, criando as chaves de autenticação:
 

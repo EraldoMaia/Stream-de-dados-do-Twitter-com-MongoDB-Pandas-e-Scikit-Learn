@@ -121,3 +121,38 @@ Em seguida, verificamos se realmentes os dados foram gravados no MongoDB
 
 # Análise de Dados com Pandas e Scikit-Learn
 
+Iremos agora, converter os tweets coletados, para o formato no Pandas (O Pandas, é uma expecie de excel para o Python, pois permite o trabalho com Data Frames, objeto no formato de linhas e colunas). O Scikit-Learn é um pacote para machine learning, com ele conseguimos criar modelos preditivos.
+
+Primeiro iremos utilizar uma list comprehension, criando um dataset com dados retornados do MongoDB:
+
+> `dataset = [{"created_at": item["created_at"], "text": item["text"],} for item in col.find()]`
+
+Em seguida, importamos o Pandas
+
+> `import pandas as pd`
+
+Agora iremos converter o objeto `dataset` para o tipo `dataframe` do Pandas, granvando no objeto `df`
+
+> `df = pd.DataFrame(dataset)`
+
+Imprima o dataframe:
+
+> `df`
+
+Agora, iremos importar a função `CountVectorizer` do Scikit-Learn, essa função nos permite contar quantas vezes uma determinada palavra aparece no nosso conjunto de dados.
+
+> `from sklearn.feature_extraction.text import CountVectorizer`
+
+Usando o método CountVectorizer para criar uma matriz de documentos
+````python
+cv = CountVectorizer()
+count_matrix = cv.fit_transform(df.text)
+````
+
+Por fim, contamos o número de ocorrências das principais palavras em nosso dataset:
+
+````python
+word_count = pd.DataFrame(cv.get_feature_names(), columns=["word"])
+word_count["count"] = count_matrix.sum(axis=0).tolist()[0]
+word_count = word_count.sort_values("count", ascending=False).reset_index(drop=True)
+word_count[:50]

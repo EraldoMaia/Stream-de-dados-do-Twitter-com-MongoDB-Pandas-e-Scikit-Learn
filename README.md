@@ -124,7 +124,7 @@ Em seguida, verificamos se realmentes os dados foram gravados no MongoDB
 
 > `col.find_one()`
 
-<img width="1074" alt="Captura de Tela 2021-02-15 às 14 09 17" src="https://user-images.githubusercontent.com/55844931/107975883-81998980-6f97-11eb-88d5-4d6fac8b393b.png">
+<img width="985" alt="Captura de Tela 2021-02-15 às 14 09 17" src="https://user-images.githubusercontent.com/55844931/107977122-63348d80-6f99-11eb-8c00-eada36b94140.png">
 
 
 # Análise de Dados com Pandas e Scikit-Learn

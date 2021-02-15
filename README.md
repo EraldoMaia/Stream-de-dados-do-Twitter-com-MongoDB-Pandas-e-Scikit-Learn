@@ -144,6 +144,9 @@ Imprima o dataframe:
 
 > `df`
 
+<img width="1089" alt="Captura de Tela 2021-02-15 às 14 11 35" src="https://user-images.githubusercontent.com/55844931/107976088-cae9d900-6f97-11eb-97a6-89426ab854e2.png">
+
+
 Agora, iremos importar a função `CountVectorizer` do Scikit-Learn, essa função nos permite contar quantas vezes uma determinada palavra aparece no nosso conjunto de dados.
 
 > `from sklearn.feature_extraction.text import CountVectorizer`

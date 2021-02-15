@@ -28,7 +28,6 @@ Em sequencia vamos importar alguns módulos que iremos utilizar nesse projeto.
 > `import json`
 
 Agora, precisamos definir as chaves que nos permitem conectar ao Twitter. 
-_Caso voce não saiba como obter essas chaves, eu explico com mais detalhes no meu blog:_ [eraldomaia.com/blog](url)
 
 > `consumer_key = "xxxxxxxxx"` (API key)
 

@@ -109,6 +109,8 @@ Iniciamos então o filtro coletando e gravando os tweets no MongoDB
 
 _obs: No momento que voce estiver satisfeito com a quantidade de dados coletados, precione o botao "STOP" no seu Jupter Notebook._
 
+<img width="1078" alt="Captura de Tela 2021-02-15 às 14 03 33" src="https://user-images.githubusercontent.com/55844931/107975591-15b72100-6f97-11eb-8f18-9347e429fdce.png">
+
 # Consultando os dados no MongoDB
 
 Antes de tudo devemos desconectar o MongoDB, pois não iremos mais coletar tweets

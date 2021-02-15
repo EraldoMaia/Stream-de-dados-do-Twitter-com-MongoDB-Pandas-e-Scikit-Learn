@@ -44,6 +44,7 @@ Após criar o objeto de autenticação, passamos por meio da função `set_acces
 > `auth.set_access_token(access_token, access_token_secret)`
 
 Na sequencia criamos uma classe para capturar os stream de dados do Twitter e armazenar no MongoDB.
+
 _obs: O MongoDB deve está conectado_
 
 ```python 

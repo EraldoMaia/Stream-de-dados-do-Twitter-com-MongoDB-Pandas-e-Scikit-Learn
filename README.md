@@ -45,7 +45,7 @@ Após criar o objeto de autenticação, passamos por meio da função `set_acces
 
 Na sequencia criamos uma classe para capturar os stream de dados do Twitter e armazenar no MongoDB.
 
-_obs: O MongoDB deve está conectado_
+_obs: O MongoDB deve está conectado_ `brew services start mongodb-community`
 
 ```python 
 class MyListener(StreamListener):

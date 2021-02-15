@@ -1,5 +1,7 @@
 # Stream-de-dados-do-Twitter-com-MongoDB-Pandas-e-Scikit-Learn
-Basicamente o que faremos é um trabalho de Text Mining (técnica de processamento de linguagem natural para extrair informações relevantes de dados de textos).Como o Twitter, possui basicamente textos, faremos uma operação de extract (extração), vamos gravar esses dados em um Data Base (MongoDB) e depois iremos aplicar algumas técnicas de analise.
+Basicamente o que faremos é um trabalho de Text Mining (técnica de processamento de linguagem natural para extrair informações relevantes de dados de textos).
+
+Como o Twitter, possui basicamente textos, faremos uma operação de extract (extração), vamos gravar esses dados em um Data Base (MongoDB) e depois iremos aplicar algumas técnicas de analise.
 
 
 # Preparando a conexão com o Twitter:
@@ -77,5 +79,31 @@ Em seguida, criamos o objeto `mystream` que vai fazer a autenticação com a API
 
 Passando a chave de autenticação `Auth` e o listener que será usado, que no caso será o objeto `mylistener`.
 
-# Preparando a conexão com o MongoDB:
+# Preparando a conexão com o MongoDB e coletando os Tweets:
+
+Para conectar com o MongoDB, primeiramente importamos do pacote `PyMongo` o módulo `MongoClient`
+
+> `from pymongo import MongoClient`
+
+A partir dai, definimos a conexão com o localhost na porta 27017
+
+> `client = MongoClient('localhost', 27017)`
+
+Então criamos o banco de dados `twitterdb`
+
+> `db = client.twitterdb`
+
+Criamos também a coleção (Tabela no MongoDB) chamada de `tweets`
+
+> `col = db.tweets`
+
+Agora criamos uma lista, que terá as palavras chaves, que serão coletadas
+
+> `keywords = ['Big Data', 'Python', 'Data Mining', 'Data Science']`
+
+# Coletando os Tweets
+
+Iniciamos então o filtro coletando e gravando os tweets no MongoDB
+
+> `mystream.filter(track=keywords)`
 

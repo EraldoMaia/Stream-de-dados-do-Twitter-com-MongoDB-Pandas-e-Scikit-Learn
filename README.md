@@ -164,3 +164,5 @@ word_count = pd.DataFrame(cv.get_feature_names(), columns=["word"])
 word_count["count"] = count_matrix.sum(axis=0).tolist()[0]
 word_count = word_count.sort_values("count", ascending=False).reset_index(drop=True)
 word_count[:50]
+````
+<img width="1102" alt="Captura de Tela 2021-02-15 às 14 13 53" src="https://user-images.githubusercontent.com/55844931/107976320-1dc39080-6f98-11eb-98e4-1f94861c2fb9.png">
